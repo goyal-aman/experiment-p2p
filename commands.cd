@@ -1,0 +1,11 @@
+
+# login to your registry (dockerhub example)
+echo YOUR_GITHUB_PAT | docker login ghcr.io -u goyal-aman --password-stdin
+
+# build
+docker build -t ghcr.io/goyal-aman/experiment-p2p:latest .
+
+
+# tag & push
+docker tag ghcr.io/goyal-aman/experiment-p2p:latest ghcr.io/goyal-aman/experiment-p2p:latest
+docker push ghcr.io/goyal-aman/experiment-p2p:latest
